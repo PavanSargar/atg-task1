@@ -1,0 +1,51 @@
+.postcard {
+  background-color: var(--background-color) !important;
+}
+
+.share-btn {
+  background: var(--background-light);
+  padding: 4px 8px;
+  border: none;
+  border-radius: 2px;
+}
+
+.title {
+  font-size: var(--d-xl);
+  width: 100%;
+}
+
+.author-name,
+.category,
+.excerpt {
+  font-size: var(--d-lg);
+}
+
+.author-name {
+  font-weight: bold;
+}
+
+.views-text {
+  font-size: var(--d-sm);
+}
+
+.views {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: var(--d-md) !important;
+    width: 100%;
+  }
+  .category,
+  .excerpt {
+    font-size: var(--d-sm) !important;
+  }
+  .author-name,
+  .views-text {
+    font-size: var(--d-xsm);
+  }
+}

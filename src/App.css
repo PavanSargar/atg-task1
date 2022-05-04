@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+body {
+  font-family: var(--font-family) !important;
+  background-color: var(--background-color) !important;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Reseting default styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Default padding and margin */
+.section-margin {
+  margin: 2rem 4rem !important;
+}
+.section-padding {
+  padding: 2rem 12rem;
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none !important;
+  color: unset !important;
+}
+
+/* disabling default bootstrap styles */
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: none;
+  box-shadow: none;
+  outline: 0 none;
+  background-color: var(--input-background);
+}
+
+@media screen and (max-width: 976px) {
+  .section-padding {
+    padding: 2rem 4rem;
+  }
+  .section-margin {
+    margin: 2rem !important;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media screen and (max-width: 576px) {
+  .section-padding {
+    padding: 2rem;
+  }
+  .section-margin {
+    margin: 2rem 1rem !important;
+  }
+}
+@media screen and (max-width: 410px) {
+  .section-padding {
+    padding: 2rem 1rem;
+  }
+}
+
+/* custom bootstrap dropdown styles */
+.dropdown {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end;
 }
 
-.App-link {
-  color: #61dafb;
+.dropdown button {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none;
+  outline: none;
+  padding: 6px 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dropdown button:focus-within {
+  background-color: var(--background-light) !important;
+}
+
+.dropdown-toggle::after {
+  display: none !important;
 }

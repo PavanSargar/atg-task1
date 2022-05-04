@@ -1,0 +1,31 @@
+
+
+.tab-bar a {
+    font-size: var(--d-md);
+}
+
+.filter-button {
+    display: none;
+}
+
+.active {
+    color: #0B5ED7 !important; 
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .category-col li:not(:first-child) {
+        display: none;
+    }
+    .filter-button {
+        display: block;
+        background: #F1F3F5;
+    }
+    .filter-button a {
+        color: #212529;
+    }
+    .write-button, .join-button {
+        display: none !important;
+    }
+}
